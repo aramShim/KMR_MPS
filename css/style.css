@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/*Demo Song List*/
+.border-section {padding: 20px; background: #fff; border: 1px solid var(--border-color); box-shadow: 0px 0px 12px rgba(39, 70, 127, 0.02); border-radius: 6px; margin-bottom: 20px; box-sizing: border-box;}
+.border-section .list-top {padding-bottom: 10px;}
+.border-section .list-top.flex {position: relative; justify-content: space-between; align-items: flex-end;}
+
+.search-wrap {}
+.search-input dl {width: calc(50% - 50px);}
+.search-input dl dt,
+.search-input dl dd {display: inline-block;}
+.search-input dl dt {width: 15%;}
+.search-input dl dd {width: 80%;}
+.search-input dl dd .select {width: 29%;}
+.search-input dl dd .input-text {width: 70%;}
+
+tr.status-placed td {background: var(--color-green-bg);}
+tr.status-na td {background: var(--color-red-bg);}
+tr.status-released td {background: var(--color-blue-bg);}
+
+.main-list {height: calc(100vh - 250px)}
+.table-wrap {max-height: calc(100% - 100px);}
+.table-wrap thead th {position: sticky; top: 0; z-index: 20;}
+td[data-col='Title'] a:hover {text-decoration: underline;}
+
+
+/*Demo Song Info*/
+.info-list.flex {justify-content: space-between;}
+.info-list .info-left {width: 40%;}
+.info-list .info-right {width: 59%;}
+.info-left .th-col {width: 120px;}
+.info-left table input[type="text"] {width: 100%;}
+
+.info-right {}
+.info-right .info-list-header {padding-bottom: 5px;}
+.info-right .info-list-header.flex { align-items: flex-end; justify-content: space-between;}
+.info-right h3 {font-size: 18px; }
+.info-right > section {height: calc(50% - 20px);}
+.info-right .table-wrap {max-height: 100%; height: calc(100% - 50px);}
+
+/*Excel Upload*/
+dl.dl-inline dt {padding-right: 10px;}
+dl.dl-inline dt,
+dl.dl-inline dd {display: inline-block;}
+.excel-wrap .flex {justify-content: space-between;}
+.excel-list {height: 67vh;}
+.excel-list .table-wrap {max-height: calc(100% - 50px);}
+
+/*Popup*/
+#popup {padding: 20px;}
+.popup-header h2 {font-size: 20px; font-weight: bold; margin-bottom: 10px;}
+.popup-list .input-text {width: 100%;}
+#popup table {border-top: 2px solid #252525; min-width: 550px;}
+
+/*Demo Client List*/
+.client-list .table-wrap {height: calc(100% - 100px);}
+
+/*Demo Client Info*/
+.clientInfo-list .th-col {width: 120px}
+.clientInfo-list table label + span {display: inline-block; padding-left: 10px;}
