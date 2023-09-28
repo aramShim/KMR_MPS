@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/lib/daterangepicker.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+		
+	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/kmrmps.js"></script>
+	
+</head>
+<body>
+	<div id="popup">
+		<div class="popup-header">
+			<h2>Pitching History</h2>
+		</div>
+		<div class="popup-list">
+			<div class="table-wrap table-scroll">
+				<table class="table-column">
+					<colgroup>
+						<col class="th-col">
+						<col>
+						<col class="th-col">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>Del</th>
+							<td colspan="3">
+								<label class="c_opt c_check">
+									<input class="c_opt__btn input_check__btn" type="checkbox">
+									<span class="c_opt__label input_check__label square"></span>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th>Sent</th>
+							<td colspan="3">
+								<label class="c_opt c_check">
+									<input class="c_opt__btn input_check__btn" type="checkbox">
+									<span class="c_opt__label input_check__label square"></span>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th>Pitching Company</th>
+							<td colspan="3"><input type="text" class="input-text"></td>
+						</tr>
+						<tr>
+							<th>Send Date</th>
+							<td><input type="text" class="input-date datepicker-period" value=""></td>
+							<th>Request Date</th>
+							<td><input type="text" class="input-date datepicker-period" value=""></td>
+						</tr>
+						<tr>
+							<th>Artist</th>
+							<td colspan="3"><input type="text" class="input-text"></td>
+						</tr>
+						<tr>
+							<th>Content</th>
+							<td colspan="3"><input type="text" class="input-text"></td>
+						</tr>
+						<tr>
+							<th>Remark</th>
+							<td colspan="3"><input type="text" class="input-text"></td>
+						</tr>
+						<tr>
+							<th>Remark</th>
+							<td colspan="3"><input type="text" class="input-text"></td>
+						</tr>
+						<tr>
+							<th>Use</th>
+							<td colspan="3">
+								<label class="c_opt c_check">
+									<input class="c_opt__btn input_check__btn" type="checkbox">
+									<span class="c_opt__label input_check__label square"></span>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th>Demo Cd</th>
+							<td colspan="3"><input type="text" class="input-text" value=""></td>
+						</tr>
+						<tr>
+							<th>Send Cd</th>
+							<td colspan="3"><input type="text" class="input-text" value=""></td>
+					
+						</tr>
+						<tr>
+							<th>Cr Time	</th>
+							<td><input type="text" class="input-date datepicker-period" value=""></td>
+							<th>Cr User Cd</th>
+							<td><input type="text" class="input-text" value=""></td>
+						</tr>
+						<tr>
+							<th>Mody Time</th>
+							<td><input type="text" class="input-date datepicker-period" value=""></td>
+							<th>Mody User Cd</th>
+							<td><input type="text" class="input-text" value=""></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn-center-wrap">
+					<button type="button" class="btn btn-pos">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

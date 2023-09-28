@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/lib/daterangepicker.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+		
+	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/kmrmps.js"></script>
+	
+</head>
+<body>
+<div id="wrap">
+	<!--left Menu-->
+	<div id="aside" class="aside-fixed">
+		<div class="aside-header">
+			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+		</div>
+		<div class="gnb">			
+			<ul class="dep nav-menu">
+				<li class="nav-list">
+					<a href="#">Demo Song <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="index.html">Demo Song List</a></li>
+						<li><a href="demosong_info.html">Demo Song Info</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Pitching History <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="pitching_update.html">Pitching History Update</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Demo Client <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="democlient_list.html" class="on">Demo Client List</a></li>
+						<li><a href="democlient_info.html">Demo Client Info</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--//left Menu-->
+	<!--content-->
+	<div id="content" class="content-wapper">
+		<!--header-->
+		<div id="header">
+			<div class="header-mypage">
+				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
+				<div class="mypage-wrap">
+					<p>User Name</p>
+					<span>welcome, User Name!</span>
+					<ul>
+						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--//header-->
+
+		<!--main :: demo song list-->
+		<div id="main" class="">
+			<div class="main-header">
+				<h2>Demo Client List</h2>
+				<div class="button-wrap ly-right">
+					<button type="button" onclick="wPopup('pitching_update_popup.html','pitchingPopup', '0', '0', '600', '800')" class="btn btn-sm"><i class="icon-sign01"></i>New</button>
+				</div>
+			</div>
+			<div class="main-search border-section">
+				<div class="search-wrap">
+					<div class="search-input flex">
+						<dl>
+							<dt>Search by Key A</dt>
+							<dd>
+								<select name="" id="" class="select">
+									<option value="">Name</option>
+									<option value="">Code&No</option>
+									<option value="">Song Title</option>
+									<option value="">Admin Cd</option>
+									<option value="">Admin Nm</option>
+									<option value="">Attached File Nm</option>
+								</select>
+								<input type="text" class="input-text">
+							</dd>
+						</dl>
+						<dl>
+							<dt>Search by Key B</dt>
+							<dd>
+								<select name="" id="" class="select">
+									<option value="">Name</option>
+									<option value="">Code&No</option>
+									<option value="">Song Title</option>
+									<option value="">Admin Cd</option>
+									<option value="">Admin Nm</option>
+									<option value="">Attached File Nm</option>
+								</select>
+								<input type="text" class="input-text">
+							</dd>
+						</dl>
+						<button type="button" class="search-btn btn btn-sm dark"><i class="icon-icon08"></i>Search</button>
+					</div>
+						
+				</div>
+			</div>
+			<div class="main-list border-section client-list">
+				<div class="list-top flex">
+					<p>Total <b class="num">154</b></p>
+					<div class="button-wrap">
+						<button type="button" class="btn red btn-sm"><i class="icon-cyber30"></i> Delete</button>
+					</div>
+				</div>
+				<div class="table-wrap table-scroll">
+					<table class="table-row">
+						<thead>
+							<tr>
+								<th>Del</th>
+								<th>Client Cd</th>
+								<th>Client Nm</th>
+								<th>Kor Nm</th>
+								<th>Admin Cd</th>
+								<th>Territory</th>
+								<th>Writer Type</th>
+								<th>Attached files</th>
+								<th>Contract Type</th>
+								<th>Signed Date</th>
+								<th>Agreement From</th>
+								<th>Agreement To</th>
+								<th>Auto Extension</th>
+								<th>Extension Term</th>
+								<th>Terminate</th>
+								<th>Terminate Date</th>
+								<th>Post Term</th>
+								<th>Post Term Date</th>
+								<th>Former Publisher</th>
+								<th>Former From</th>
+								<th>Former To</th>
+								<th>Mobile</th>
+								<th>E-Mail</th>
+								<th>Genre</th>
+								<th>Remark</th>
+								<th>Cr Time</th>
+								<th>Cr User Cd</th>
+								<th>Mody Time</th>
+								<th>Mody User Cd</th>
+								
+							</tr>
+						</thead>
+						<tbody>							
+							<tr>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="ClientCd">AWRII_1</td>
+								<td data-col="ClientNm"><a href="client info 화면으로">NICOLE JOHANNA DIN</a></td>
+								<td data-col="KorNm">유병현</td>
+								<td data-col="AdminCd">THEHUBPUB</td>
+								<td data-col="Territory">World excluding Korea</td>
+								<td data-col="WriterType"></td>
+								<td data-col="Attachedfiles">2</td>
+								<td data-col="ContractType">Catalouge Deal</td>
+								<td data-col="SignedDate">2023-09-01</td>
+								<td data-col="AgreementFrom">2023-09-01</td>
+								<td data-col="AgreementTo">2028-08-31</td>
+								<td data-col="AutoExtension">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" checked disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="ExtensionTerm">12</td>
+								<td data-col="Terminate">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="TerminateDate"></td>
+								<td data-col="PostTerm">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="PostTermDate"></td>
+								<td data-col="FormerPublisher"></td>
+								<td data-col="FormerFrom"></td>
+								<td data-col="FormerTo"></td>
+								<td data-col="Mobile">010-9655-1777</td>
+								<td data-col="E-Mail">awrilwill@gmail.com</td>
+								<td data-col="Genre"></td>
+								<td data-col="Remark">AWRII(일반&KMR 국내&해외)First payment</td>
+								<td data-col="CrTime">2023-09-08 16:00:30</td>
+								<td data-col="CrUserCd">michaella</td>
+								<td data-col="ModyTime">2023-09-22 11:44:50</td>
+								<td data-col="ModyUserCd">michaella</td>
+							</tr>
+							<tr>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="ClientCd">AWRII_1</td>
+								<td data-col="ClientNm"><a href="client info 화면으로">NICOLE JOHANNA DIN</a></td>
+								<td data-col="KorNm">유병현</td>
+								<td data-col="AdminCd">THEHUBPUB</td>
+								<td data-col="Territory">World excluding Korea</td>
+								<td data-col="WriterType"></td>
+								<td data-col="Attachedfiles">2</td>
+								<td data-col="ContractType">Catalouge Deal</td>
+								<td data-col="SignedDate">2023-09-01</td>
+								<td data-col="AgreementFrom">2023-09-01</td>
+								<td data-col="AgreementTo">2028-08-31</td>
+								<td data-col="AutoExtension">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" checked disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="ExtensionTerm">12</td>
+								<td data-col="Terminate">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="TerminateDate"></td>
+								<td data-col="PostTerm">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="PostTermDate"></td>
+								<td data-col="FormerPublisher"></td>
+								<td data-col="FormerFrom"></td>
+								<td data-col="FormerTo"></td>
+								<td data-col="Mobile">010-9655-1777</td>
+								<td data-col="E-Mail">awrilwill@gmail.com</td>
+								<td data-col="Genre"></td>
+								<td data-col="Remark">AWRII(일반&KMR 국내&해외)First payment</td>
+								<td data-col="CrTime">2023-09-08 16:00:30</td>
+								<td data-col="CrUserCd">michaella</td>
+								<td data-col="ModyTime">2023-09-22 11:44:50</td>
+								<td data-col="ModyUserCd">michaella</td>
+							</tr>
+							<tr>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="ClientCd">AWRII_1</td>
+								<td data-col="ClientNm"><a href="client info 화면으로">NICOLE JOHANNA DIN</a></td>
+								<td data-col="KorNm">유병현</td>
+								<td data-col="AdminCd">THEHUBPUB</td>
+								<td data-col="Territory">World excluding Korea</td>
+								<td data-col="WriterType"></td>
+								<td data-col="Attachedfiles">2</td>
+								<td data-col="ContractType">Catalouge Deal</td>
+								<td data-col="SignedDate">2023-09-01</td>
+								<td data-col="AgreementFrom">2023-09-01</td>
+								<td data-col="AgreementTo">2028-08-31</td>
+								<td data-col="AutoExtension">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" checked disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="ExtensionTerm">12</td>
+								<td data-col="Terminate">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="TerminateDate"></td>
+								<td data-col="PostTerm">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="PostTermDate"></td>
+								<td data-col="FormerPublisher"></td>
+								<td data-col="FormerFrom"></td>
+								<td data-col="FormerTo"></td>
+								<td data-col="Mobile">010-9655-1777</td>
+								<td data-col="E-Mail">awrilwill@gmail.com</td>
+								<td data-col="Genre"></td>
+								<td data-col="Remark">AWRII(일반&KMR 국내&해외)First payment</td>
+								<td data-col="CrTime">2023-09-08 16:00:30</td>
+								<td data-col="CrUserCd">michaella</td>
+								<td data-col="ModyTime">2023-09-22 11:44:50</td>
+								<td data-col="ModyUserCd">michaella</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				<div class="pager">
+					<ul>
+						<li><a href=""><i class="icon-arrow21"></i></a></li>
+						<li><a href=""><i class="icon-arrow17"></i></a></li>
+						<li class="current_page"><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href=""><i class="icon-arrow18"></i></a></li>
+						<li><a href=""><i class="icon-arrow22"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		<!--//main-->
+
+		<!--footer-->
+		<div id="footer">
+			<p>2023@ Design by EasyNext</p>
+		</div>
+		<!--//footer-->
+	</div>
+	<!--//content-->
+</div>
+		

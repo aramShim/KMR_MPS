@@ -1,0 +1,1506 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/lib/daterangepicker.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+		
+	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/kmrmps.js"></script>
+	
+</head>
+<body>
+<div id="wrap">
+	<!--left Menu-->
+	<div id="aside" class="aside-fixed">
+		<div class="aside-header">
+			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+		</div>
+		<div class="gnb">			
+			<ul class="dep nav-menu">
+				<li class="nav-list">
+					<a href="#">Demo Song <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="index.html" class="on">Demo Song List</a></li>
+						<li><a href="demosong_info.html">Demo Song Info</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Pitching History <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="pitching_update.html">Pitching History Update</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Demo Client <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="democlient_list.html">Demo Client List</a></li>
+						<li><a href="democlient_info.html">Demo Client Info</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--//left Menu-->
+	<!--content-->
+	<div id="content" class="content-wapper">
+		<!--header-->
+		<div id="header">
+			<div class="header-mypage">
+				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
+				<div class="mypage-wrap">
+					<p>User Name</p>
+					<span>welcome, User Name!</span>
+					<ul>
+						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--//header-->
+
+		<!--main :: demo song list-->
+		<div id="main" class="">
+			<div class="main-header">
+				<h2>Demo Song List</h2>
+				<div class="button-wrap ly-right">
+					<a href="demosong_info.html" class="btn btn-sm"><i class="icon-sign01"></i> New</a>
+				</div>
+			</div>
+			<div class="main-search border-section">
+				<div class="search-wrap">
+					<div class="search-input flex">
+						<dl>
+							<dt>Search by Key A</dt>
+							<dd>
+								<select name="" id="" class="select">
+									<option value="">Demo Title</option>
+									<option value="">Writer Nm</option>
+									<option value="">Pitching Company</option>
+									<option value="">Pitching Artist</option>
+									<option value="">Genre</option>
+									<option value="">Vocal</option>
+									<option value="">Sub Genre</option>
+									<option value="">Style</option>
+								</select>
+								<input type="text" class="input-text">
+							</dd>
+						</dl>
+						<dl>
+							<dt>Search by Key B</dt>
+							<dd>
+								<select name="" id="" class="select">
+									<option value="">Demo Title</option>
+									<option value="">Writer Nm</option>
+									<option value="">Pitching Company</option>
+									<option value="">Pitching Artist</option>
+									<option value="">Genre</option>
+									<option value="">Vocal</option>
+									<option value="">Sub Genre</option>
+									<option value="">Style</option>
+								</select>
+								<input type="text" class="input-text">
+							</dd>
+						</dl>
+						<button type="button" class="search-btn btn btn-sm dark"><i class="icon-icon08"></i>Search</button>
+					</div>
+						
+				</div>
+			</div>
+			<div class="main-list border-section">
+				<div class="list-top flex">
+					<p>Total <b class="num">154</b></p>
+					<div class="button-wrap">
+						<button type="button" class="btn red btn-sm"><i class="icon-cyber30"></i> Delete</button>
+					</div>
+				</div>
+				<div class="table-wrap table-scroll">
+					<table class="table-row">
+						<thead>
+							<tr>
+								<th>Demo Cd</th>
+								<th>D.P(X)</th>
+								<th>Title</th>
+								<th>Writer Nm</th>
+								<th>Genre</th>
+								<th>Sub Genre</th>
+								<th>Style/Mood</th>
+								<th>Theme</th>
+								<th>Tags</th>
+								<th>Vocal</th>
+								<th>Song Lead</th>
+								<th>Pitching #</th>
+								<th>Request</th>
+								<th>Status</th>
+								<th>On Hold</th>
+								<th>Holding Term</th>
+								<th>Delivered Date</th>
+								<th>Duration</th>
+								<th>Bpm</th>
+								<th>Key</th>
+								<th>Lyrics</th>
+								<th>File Path</th>
+								<th>Remark</th>
+								<th>Attached File Name</th>
+								<th>Cr Time</th>
+								<th>Cr User Cd</th>
+								<th>Mody Time</th>
+								<th>Mody User Cd</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- [P]:staus 에 따라서 tr에 class [status-placed, status-na , status-released] 가 추가됩니다. -->
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="WriterNm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="SubGenre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="SongLead"></td>
+								<td data-col="Pitching#"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="OnHold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="HoldingTerm"></td>
+								<td data-col="DeliveredDate"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="FilePath"></td>
+								<td data-col="Remark"></td>
+								<td data-col="AttachedFileName"></td>
+								<td data-col="CrTime">2023-09-20 14:07:56</td>
+								<td data-col="CrUserCd">rae</td>
+								<td data-col="ModyTime">2023-09-20 17:40:33</td>
+								<td data-col="ModyUserCd">ldy</td>								
+							</tr>
+							<tr class="status-placed">
+								<td data-col="DemoCd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvdfgergasdfv</a></td>
+								<td data-col="WriterNm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="SubGenre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="SongLead"></td>
+								<td data-col="Pitching#"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="" selected>Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="OnHold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="HoldingTerm"></td>
+								<td data-col="DeliveredDate"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="FilePath"></td>
+								<td data-col="Remark"></td>
+								<td data-col="AttachedFileName"></td>
+								<td data-col="CrTime">2023-09-20 14:07:56</td>
+								<td data-col="CrUserCd">rae</td>
+								<td data-col="ModyTime">2023-09-20 17:40:33</td>
+								<td data-col="ModyUserCd">ldy</td>								
+							</tr>
+							<tr class="status-na">
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="" selected>N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr class="status-released">
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="" selected>Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+							<tr>
+								<td data-col="Demo Cd">D00000004</td>
+								<td data-col="DP">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Title"><a href="demo Song Info 로 이동">dfdfdfdfvvv</a></td>
+								<td data-col="Writer Nm">ALYSA / William / Scone</td>
+								<td data-col="Genre">k km km</td>
+								<td data-col="Sub Genre"></td>
+								<td data-col="Style/Mood"></td>
+								<td data-col="Theme"></td>
+								<td data-col="Tags"></td>
+								<td data-col="Vocal"></td>
+								<td data-col="Song Lead"></td>
+								<td data-col="Pitching #"></td>
+								<td data-col="Request"></td>
+								<td data-col="Status">
+									<select name="" id="" class="select">
+										<option value="">Available</option>
+										<option value="">In-Progress</option>
+										<option value="">Hold</option>
+										<option value="">Placed</option>
+										<option value="">N/A</option>
+										<option value="">Released</option>
+									</select>
+								</td>
+								<td data-col="On Hold">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Holding Term"></td>
+								<td data-col="Delivered Date"></td>
+								<td data-col="Duration"></td>
+								<td data-col="Bpm"></td>
+								<td data-col="Key"></td>
+								<td data-col="Lyrics">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="File Path"></td>
+								<td data-col="Remark"></td>
+								<td data-col="Attached File Name"></td>
+								<td data-col="Cr Time">2023-09-20 14:07:56</td>
+								<td data-col="Cr User Cd">rae</td>
+								<td data-col="Mody Time">2023-09-20 17:40:33</td>
+								<td data-col="Mody User Cd">ldy</td>								
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<div class="pager">
+					<ul>
+						<li><a href=""><i class="icon-arrow21"></i></a></li>
+						<li><a href=""><i class="icon-arrow17"></i></a></li>
+						<li class="current_page"><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href=""><i class="icon-arrow18"></i></a></li>
+						<li><a href=""><i class="icon-arrow22"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		<!--//main-->
+
+		<!--footer-->
+		<div id="footer">
+			<p>2023@ Design by EasyNext</p>
+		</div>
+		<!--//footer-->
+	</div>
+	<!--//content-->
+</div>
+		

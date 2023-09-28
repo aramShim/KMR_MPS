@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/lib/daterangepicker.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+		
+	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/kmrmps.js"></script>
+	
+</head>
+<body>
+<div id="wrap">
+	<!--left Menu-->
+	<div id="aside" class="aside-fixed">
+		<div class="aside-header">
+			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+		</div>
+		<div class="gnb">			
+			<ul class="dep nav-menu">
+				<li class="nav-list">
+					<a href="#">Demo Song <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="index.html">Demo Song List</a></li>
+						<li><a href="demosong_info.html" class="on">Demo Song Info</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Pitching History <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="pitching_update.html">Pitching History Update</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Demo Client <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="democlient_list.html">Demo Client List</a></li>
+						<li><a href="democlient_info.html">Demo Client Info</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--//left Menu-->
+	<!--content-->
+	<div id="content" class="content-wapper">
+		<!--header-->
+		<div id="header">
+			<div class="header-mypage">
+				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
+				<div class="mypage-wrap">
+					<p>User Name</p>
+					<span>welcome, User Name!</span>
+					<ul>
+						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--//header-->
+
+		<!--excel upload-->
+		<div id="main" class="">
+			<div class="main-header">
+				<h2>Excel Upload</h2>
+			</div>
+			<div class="border-section">
+				<div class="excel-wrap">
+					<div class="flex">
+						<dl class="dl-inline">
+							<dt>Type</dt>
+							<dd>
+								<select name="" id="" class="select">
+									<option value="">DISCO Report</option>
+									<option value="">DISCO Metadata</option>
+								</select>
+							</dd>
+						</dl>
+						
+						<div class="button-wrap">
+							<label for="file">
+								<input type="file" name="file" id="file" class="input-file">
+								<div class="btn-upload btn green btn-sm"><i class="icon-arrow86"></i> Excel Upload</div>
+							</label>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+			<!--[P]: 엑셀 업로드하면 나오는 테이블-->
+			<div class="border-section excel-list">
+				<div class="list-top flex">
+					<p>Total <b class="num">154</b></p>
+					<div class="button-wrap">
+						<button type="button" class="btn red btn-sm"><i class="icon-cyber30"></i> Delete</button>
+					</div>
+				</div>
+				<div class="table-wrap table-scroll">
+					<table class="table-row">
+						<thead>
+							<th>No</th>
+							<th>Del</th>
+							<th>Cnt</th>
+							<th>Song Code(DB)</th>
+							<th>Song Title(DB)</th>
+							<th>Writers(DB)</th>
+							<th>A</th>
+							<th>B</th>
+							<th>C</th>
+							<th>D</th>
+							<th>E</th>
+							<th>F</th>
+							<th>G</th>
+							<th>H</th>
+							<th>I</th>
+							<th>J</th>
+							<th>K</th>
+							<th>L</th>
+							<th>M</th>
+							<th>N</th>
+							<th>O</th>
+							<th>P</th>
+							<th>Q</th>
+							<th>R</th>
+							<th>S</th>
+							<th>T</th>
+							<th>U</th>
+							<th>V</th>
+							<th>W</th>
+							<th>X</th>
+							<th>Y</th>
+							<th>Z</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+							<tr>
+								<td data-col="No">1</td>
+								<td data-col="Del">
+									<label class="c_opt c_check">
+										<input class="c_opt__btn input_check__btn" type="checkbox">
+										<span class="c_opt__label input_check__label square"></span>
+									</label>
+								</td>
+								<td data-col="Cnt"></td>
+								<td data-col="SongCode">TEST</td>
+								<td data-col="SongTitle">SONG TITLE TEST</td>
+								<td data-col="Writers">WishList</td>
+								<td data-col="A">testA</td>
+								<td data-col="B">testA</td>
+								<td data-col="C">testA</td>
+								<td data-col="D">testA</td>
+								<td data-col="E">testA</td>
+								<td data-col="F">testA</td>
+								<td data-col="G">testA</td>
+								<td data-col="H">testA</td>
+								<td data-col="I">testA</td>
+								<td data-col="J">testA</td>
+								<td data-col="K">testA</td>
+								<td data-col="L">testA</td>
+								<td data-col="M">testA</td>
+								<td data-col="N">testA</td>
+								<td data-col="O">testA</td>
+								<td data-col="P">testA</td>
+								<td data-col="Q">testA</td>
+								<td data-col="R">testA</td>
+								<td data-col="S">testA</td>
+								<td data-col="T">testA</td>
+								<td data-col="U">testA</td>
+								<td data-col="V">testA</td>
+								<td data-col="W">testA</td>
+								<td data-col="X">testA</td>
+								<td data-col="Y">testA</td>
+								<td data-col="Z">testA</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+			<div class="btn-center-wrap">
+				<button type="button" class="btn btn-pos">Save</button>
+			</div>
+		</div>
+		<!--//main-->
+
+		<!--footer-->
+		<div id="footer">
+			<p>2023@ Design by EasyNext</p>
+		</div>
+		<!--//footer-->
+	</div>
+	<!--//content-->
+</div>
+		

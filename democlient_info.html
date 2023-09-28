@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/lib/daterangepicker.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+		
+	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/kmrmps.js"></script>
+	
+</head>
+<body>
+<div id="wrap">
+	<!--left Menu-->
+	<div id="aside" class="aside-fixed">
+		<div class="aside-header">
+			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+		</div>
+		<div class="gnb">			
+			<ul class="dep nav-menu">
+				<li class="nav-list">
+					<a href="#">Demo Song <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="index.html">Demo Song List</a></li>
+						<li><a href="demosong_info.html">Demo Song Info</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Pitching History <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="pitching_update.html">Pitching History Update</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Demo Client <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="democlient_list.html">Demo Client List</a></li>
+						<li><a href="democlient_info.html" class="on">Demo Client Info</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--//left Menu-->
+	<!--content-->
+	<div id="content" class="content-wapper">
+		<!--header-->
+		<div id="header">
+			<div class="header-mypage">
+				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
+				<div class="mypage-wrap">
+					<p>User Name</p>
+					<span>welcome, User Name!</span>
+					<ul>
+						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--//header-->
+
+		<!--main :: demo song list-->
+		<div id="main" class="">
+			<div class="main-header">
+				<h2>Demo Client Info</h2>
+				
+			</div>
+			<div class="clientInfo-list">
+				<div class="border-section">
+					<div class="table-wrap">
+						<table class="table-column">
+							<colgroup>
+								<col class="th-col">
+								<col>
+								<col class="th-col">
+								<col>
+								<col class="th-col">
+								<col>
+								<col class="th-col">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>Client Cd</th>
+									<td><input type="text" class="input-text"></td>
+									<th>Client Nm</th>
+									<td><input type="text" class="input-text"></td>
+									<th>Kor Nm</th>
+									<td><input type="text" class="input-text"></td>	
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									
+									<th>Admin</th>
+									<td>
+										<select name="" id="" class="select">
+											<option value="">Kreation Music Rights - DEMO</option>
+											<option value="">MONOTREE - Demo</option>
+											<option value="">THE HUB - DEMO</option>
+											<option value="">Kreation Music Rights</option>
+											<option value="">KMR_NET MARGIN</option>
+											<option value="">MONOTREE_NET MARGIN</option>
+											<option value="">MONOTREE_PUBLISHING</option>
+											<option value="">THE HUB_NET MARGIN</option>
+											<option value="">THE HUB_PUBLISHING</option>
+											<option value="">THIRD PARTY PUBLISHING</option>
+										</select>
+									</td>
+									<th>Territory</th>
+									<td>
+										<select name="" id="" class="select">
+											<option value="">Asia</option>
+											<option value="">Asia excluding China, Taiwan</option>
+											<option value="">Asia excluding Japan </option>
+											<option value="">Asia excluding Korea</option>
+											<option value="">Asia excluding Japan, Korea</option>
+											<option value="">Japan</option>
+											<option value="">Korea</option>
+											<option value="">Korea Including Japan</option>
+											<option value="">S.E.Asia excluding Korea</option>
+											<option value="">S.E.Asia Including Korea</option>
+											<option value="">S.E.Asia excluding Korea, Japan</option>
+											<option value="">Thailand</option>
+											<option value="">World</option>
+											<option value="">World excluding Japan</option>
+											<option value="">World excluding Korea</option>
+											<option value="">World excluding Korea, Europe</option>
+											<option value="">World excluding Japan, Japan</option>
+										</select>
+									</td>
+									<th>Contract Type</th>
+									<td>
+										<select name="" id="" class="select">
+											<option value="">Almost Catalogue Deal</option>
+											<option value="">Catalouge Deal</option>
+											<option value="">Song by Song Deal</option>
+											<option value="">Buyout Deal</option>
+											<option value="">Others</option>
+											<option value="">Sub-publisher Deal</option>
+											<option value="">관리(OP)</option>
+											<option value="">관리(SP)</option>
+											<option value="">비관리</option>
+										</select>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>Signed Date</th>
+									<td><input type="text" class="input-date datepicker-period"></td>
+									<th>From-to</th>
+									<td><input type="text" class="input-date datepicker-periods"></td>		
+									<th>Auto Extenstion</th>
+									<td>
+										<label class="c_opt c_check">
+											<input class="c_opt__btn input_check__btn" type="checkbox">
+											<span class="c_opt__label input_check__label square"></span>
+										</label>
+										<span><input type="text" class="input-text sm"> Months</span>
+									</td>
+									<th>Post Term</th>
+									<td>
+										<label class="c_opt c_check">
+											<input class="c_opt__btn input_check__btn" type="checkbox">
+											<span class="c_opt__label input_check__label square"></span>
+										</label>
+										<span><input type="text" class="input-date datepicker-period"></span>
+									</td>
+								</tr>
+								<tr>
+									<th>Former Publisher</th>
+									<td><input type="text" class="input-text"></td>
+									<th>From-to</th>
+									<td><input type="text" class="input-date datepicker-periods"></td>	
+									<th>Terminate</th>
+									<td>
+										<label class="c_opt c_check">
+											<input class="c_opt__btn input_check__btn" type="checkbox">
+											<span class="c_opt__label input_check__label square"></span>
+										</label>
+										<span><input type="text" class="input-date datepicker-period"></span>
+									</td>
+									<th>Genre</th>
+									<td><input type="text" class="input-text"></td>
+								</tr>
+								<tr>
+									<th>Remark</th>
+									<td colspan="7"><input type="text" class="input-text"></td>
+								</tr>
+								<tr>
+									<th>Writer Type</th>
+									<td><input type="text" class="input-text"></td>
+									<th>Mobile</th>
+									<td><input type="text" class="input-text"></td>
+									<th>E-Mail</th>
+									<td><input type="text" class="input-text"></td>
+									<th>Web PW</th>
+									<td><input type="text" class="input-text"></td>
+								</tr>
+								<tr>
+									<th>Cr Time</th>
+									<td>2023-09-11 15:15:39</td>
+									<th>Cr User Cd</th>
+									<td>ldy</td>
+									<th>Mody Time</th>
+									<td>2023-09-20 11:39:10</td>
+									<th>Mody User Cd</th>
+									<td>rae</td>
+								</tr>								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="btn-center-wrap">
+					<button type="button" class="btn btn-pos">Save</button>
+				</div>
+			</div>
+			
+		</div>
+		<!--//main-->
+
+		<!--footer-->
+		<div id="footer">
+			<p>2023@ Design by EasyNext</p>
+		</div>
+		<!--//footer-->
+	</div>
+	<!--//content-->
+</div>
+		
