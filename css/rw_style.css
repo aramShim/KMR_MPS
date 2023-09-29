@@ -16,7 +16,7 @@
 .aside-fixed {z-index:99999; transform: translateX(-100%);}
 .wide .aside-fixed {transform: translateX(0); opacity: 1; }
 .wide .aside-bg {background: rgba(0,0,0,.5); position: fixed; top:0; left:0; bottom: 0; right: 0; z-index: 9999;}
-.aside-header button {display: block; position: absolute; top: 26px; right: 20px; font-size: 16px;}
+.aside-header button {display: block; position: absolute; top: 26px; right: 20px; font-size: 16px; color: #252525;}
 .content-wapper {padding-left: 0;}	
 }
 
@@ -54,7 +54,10 @@
  * ~480px
  * **************************************** */
 @media (max-width: 480px){
-	.wide .aside-fixed {width: 80%;}	
+	.wide .aside-fixed {width: 80%;}
+	.search-input dl dt {display: block;}
+	.search-input dl dd .select {width: 50%; margin-bottom: 2px;}
+	.search-input dl dd .input-text {width: 100%;}
 }
 /* **************************************** *
  * ~290px
