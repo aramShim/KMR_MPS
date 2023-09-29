@@ -43,6 +43,9 @@ function newColumn(status){
 	})
 	tableId.append(newRow);
 }
+function delColumn(a){
+	a.closest('tr').remove();	
+}
 
 //dateSetting
 function dateSetting(){
