@@ -50,9 +50,6 @@ dl.dl-inline dd {display: inline-block;}
 .excel-list {height: 67vh;}
 .excel-list .table-wrap {max-height: calc(100% - 50px);}
 
-/*Popup*/
-.pitching-wrap .table-wrap {height: calc(100% - 80px);}
-
 /*Demo Client List*/
 .client-list .table-wrap {height: calc(100% - 100px);}
 
