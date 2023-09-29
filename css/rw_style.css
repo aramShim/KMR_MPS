@@ -40,16 +40,21 @@
  * ~680px
  * **************************************** */
 @media (max-width: 680px){
-	.aside-menu {padding-left: 20px;}
-	#main {padding: 0 20px 20px 20px;}
-	.header-mypage {right: 20px;}
+.aside-menu {padding-left: 20px;}
+#main {padding: 0 20px 20px 20px;}
+.header-mypage {right: 20px;}
+
+.demosong-info-wrap .info-left .th-col {width: 100%;}
+.demosong-info-wrap .info-left col:nth-child(3),
+.demosong-info-wrap .info-left col:nth-child(4) {display: none;}
+.demosong-info-wrap table.table-column th,
+.demosong-info-wrap table.table-column td {width: 100%; display: block;}
 }
 /* **************************************** *
  * ~480px
  * **************************************** */
 @media (max-width: 480px){
-	.wide .aside-fixed {width: 80%;}
-	
+	.wide .aside-fixed {width: 80%;}	
 }
 /* **************************************** *
  * ~290px

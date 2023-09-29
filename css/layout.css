@@ -39,7 +39,7 @@ body {overflow: auto; /*font-size: 1.3rem;*/ }
 	box-shadow: 1px 0px 4px rgba(0,0,0,.04);
 }
 .aside-header {padding: 20px 20px; border-bottom: 1px solid #f8f7fc; height: var(--aside-header-height);}
-.aside-header h1 a {display: block; width: 100%; /*text-align: center;*/}
+/*.aside-header h1 a {display: block; width: 100%; text-align: center;}*/
 .aside-header h1 a img {width: 110px;}
 .aside-header button {display: none;}
 
@@ -71,7 +71,7 @@ transition: all .25s ease-in-out;
 /*header*/
 #header {position: sticky; top:0; z-index: 999; background: #f9fafc; height: var(--aside-header-height);}
 .aside-menu {display: flex; align-items: center; height: 100%; padding-left: 40px;}
-.aside-menu button {color: #252525; display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 6px; border: 1px solid #252525;}
+.aside-menu button {display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 6px; border: 1px solid #252525; color: #252525;}
 .header-mypage {position: absolute; top: 50%; transform: translateY(-50%); right: 40px; z-index: 99; }
 .header-mypage .top-btn-mypage {font-size: 24px; color: #a2a2a2; display: flex; align-items: center; justify-content: center; border-radius: 5px; width: 40px; height: 40px;}
 .header-mypage .top-btn-mypage.open,
