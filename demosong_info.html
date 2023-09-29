@@ -247,7 +247,6 @@
 							<table class="table-row" id="copyrightInformation">
 								<thead>
 									<tr>
-										<th>Del</th>
 										<th>Ctl</th>
 										<th>Writer Nm</th>
 										<th>Type</th>
@@ -263,16 +262,11 @@
 										<th>Cr User Cd</th>
 										<th>Mody Time</th>
 										<th>Mody User Cd</th>
+										<th>Del</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td data-col="Del">
-											<label class="c_opt c_check">
-												<input class="c_opt__btn input_check__btn" type="checkbox">
-												<span class="c_opt__label input_check__label square"></span>
-											</label>
-										</td>
 										<td data-col="Ctl">
 											<label class="c_opt c_check">
 												<input class="c_opt__btn input_check__btn" type="checkbox">
@@ -312,6 +306,9 @@
 										<td data-col="CrUserCd"><input type="text" class="input-text" value="rae"></td>
 										<td data-col="ModyTime">2023-09-20 17:40:33</td>
 										<td data-col="ModyUserCd"><input type="text" class="input-text" value="ldy"></td>
+										<td data-col="Del">
+											<button type="button" class="btn red btn-sm" onclick="delColumn(this);"><i class="icon-cyber30"></i> Del</button>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -328,8 +325,7 @@
 						<div class="table-wrap table-scroll">
 							<table class="table-row" id="pitchingHistory">
 								<thead>
-									<tr>
-										<th>Del</th>
+									<tr>										
 										<th>Sent</th>
 										<th>Pitching Company</th>
 										<th>Send Date</th>
@@ -344,16 +340,11 @@
 										<th>Cr User Cd</th>
 										<th>Mody Time</th>
 										<th>Mody User Cd</th>
+										<th>Del</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td data-col="Del">
-											<label class="c_opt c_check">
-												<input class="c_opt__btn input_check__btn" type="checkbox" disabled checked>
-												<span class="c_opt__label input_check__label square"></span>
-											</label>
-										</td>
 										<td data-col="Sent">
 											<label class="c_opt c_check">
 												<input class="c_opt__btn input_check__btn" type="checkbox" disabled>
@@ -377,7 +368,10 @@
 										<td data-col="CrTime">2023-09-20 14:07:56</td>
 										<td data-col="CrUserCd">rae</td>
 										<td data-col="ModyTime">2023-09-20 17:40:33</td>
-										<td data-col="ModyUserCd">ldy</td>								
+										<td data-col="ModyUserCd">ldy</td>	
+										<td data-col="Del">
+											<button type="button" class="btn red btn-sm" onclick="delColumn(this);"><i class="icon-cyber30"></i> Del</button>
+										</td>
 									</tr>
 								</tbody>
 							</table>
