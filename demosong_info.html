@@ -24,6 +24,7 @@
 	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
 	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
 	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/rw_style.css?<?=time()?>" />
 		
 	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -38,6 +39,7 @@
 	<div id="aside" class="aside-fixed">
 		<div class="aside-header">
 			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+			<button type="button"><i class="icon-sign03"></i></button>
 		</div>
 		<div class="gnb">			
 			<ul class="dep nav-menu">
@@ -67,18 +69,22 @@
 			</ul>
 		</div>
 	</div>
+	<div class="aside-bg"></div>
 	<!--//left Menu-->
 	<!--content-->
 	<div id="content" class="content-wapper">
 		<!--header-->
 		<div id="header">
+			<div class="aside-menu">
+				<button type="button"><i class="icon-sign57"></i></button>
+			</div>
 			<div class="header-mypage">
 				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
 				<div class="mypage-wrap">
 					<p>User Name</p>
 					<span>welcome, User Name!</span>
 					<ul>
-						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href="mypage.html"><i class="icon-business09"></i> Change Password</a></li>
 						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
 					</ul>
 				</div>
@@ -86,8 +92,8 @@
 		</div>
 		<!--//header-->
 
-		<!--main :: demo song list-->
-		<div id="main" class="">
+		<!--main :: demo song Info-->
+		<div id="main" class="demosong-info-wrap">
 			<div class="main-header">
 				<h2>Demo Song Info</h2>
 				<div class="button-wrap ly-right">
@@ -227,17 +233,18 @@
 				</div>
 				<div class="info-right">
 					<!--
-						[P]: copyright Information : write 용으로 작성, pitching History : view 용으로 작성					
+						[P]: copyright Information : write 용으로 작성, pitching History : view 용으로 작성
+						[P]: write 페이지에서 첫번째 줄 값이 없더라도 빈 값으로 넣어주세요.
 					-->
 					<section class="info-right1 border-section">
 						<div class="info-list-header flex">
 							<h3>Copyright Information</h3>
 							<div class="info-btn-wrap">
-								<button type="button" onclick="wPopup('demosongInfo_popup.html','demosongPopup', '0', '0', '600', '800')" class="btn btn-sm"><i class="icon-sign01"></i>New</button>
+								<button type="button" onclick="newColumn(copyrightInformation)" class="btn btn-sm"><i class="icon-sign01"></i>New</button>
 							</div>
 						</div>
 						<div class="table-wrap table-scroll">
-							<table class="table-row">
+							<table class="table-row" id="copyrightInformation">
 								<thead>
 									<tr>
 										<th>Del</th>
@@ -256,7 +263,6 @@
 										<th>Cr User Cd</th>
 										<th>Mody Time</th>
 										<th>Mody User Cd</th>
-										<th>save</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -273,11 +279,11 @@
 												<span class="c_opt__label input_check__label square"></span>
 											</label>
 										</td>
-										<td date-col="WriterNm"></td>
+										<td date-col="WriterNm"><input type="text" class="input-text" value=""></td>
 										<td data-col="Type">
 											<select name="" id="" class="select">
 												<option value="">Topliner</option>
-												<option value="">Producer</option>
+												<option value="" selected>Producer</option>
 												<option value="">Topliner/Producer</option>
 												<option value="">Lyricist</option>
 												<option value="">All</option>
@@ -292,7 +298,7 @@
 											</select>
 										</td>
 										<td data-col="ClientCd"><input type="text" class="input-text" value="D_TEST1"></td>
-										<td data-col="Remark"></td>										
+										<td data-col="Remark"><input type="text" class="input-text" value=""></td>										
 										<td data-col="Use">
 											<label class="c_opt c_check">
 												<input class="c_opt__btn input_check__btn" type="checkbox">
@@ -306,7 +312,6 @@
 										<td data-col="CrUserCd"><input type="text" class="input-text" value="rae"></td>
 										<td data-col="ModyTime">2023-09-20 17:40:33</td>
 										<td data-col="ModyUserCd"><input type="text" class="input-text" value="ldy"></td>
-										<td data-col="save"><button type="button" class="btn btn-sm">Save</button></td>
 									</tr>
 								</tbody>
 							</table>
@@ -316,12 +321,12 @@
 						<div class="info-list-header flex">
 							<h3>Pitching History</h3>
 							<div class="info-btn-wrap">
-								<button type="button" onclick="wPopup('demosongInfo_popup2.html','demosongPopup', '0', '0', '650', '800')" class="btn btn-sm"><i class="icon-sign01"></i>New</button>
+								<button type="button" onclick="newColumn(pitchingHistory)" class="btn btn-sm"><i class="icon-sign01"></i>New</button>
 							</div>
 						</div>
 						
 						<div class="table-wrap table-scroll">
-							<table class="table-row">
+							<table class="table-row" id="pitchingHistory">
 								<thead>
 									<tr>
 										<th>Del</th>
@@ -339,7 +344,6 @@
 										<th>Cr User Cd</th>
 										<th>Mody Time</th>
 										<th>Mody User Cd</th>
-										<th>save</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -374,7 +378,6 @@
 										<td data-col="CrUserCd">rae</td>
 										<td data-col="ModyTime">2023-09-20 17:40:33</td>
 										<td data-col="ModyUserCd">ldy</td>								
-										<td data-col="save"><button type="button" class="btn btn-sm">Save</button></td>								
 									</tr>
 								</tbody>
 							</table>
@@ -383,15 +386,13 @@
 				</div>
 				
 			</div>
+			<div class="btn-center-wrap">
+				<button type="button" class="btn btn-pos">Save</button>
+			</div>
 			
 		</div>
 		<!--//main-->
 
-		<!--footer-->
-		<div id="footer">
-			<p>2023@ Design by EasyNext</p>
-		</div>
-		<!--//footer-->
 	</div>
 	<!--//content-->
 </div>

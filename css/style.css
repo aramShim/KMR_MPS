@@ -9,7 +9,7 @@
 .search-input dl {width: calc(50% - 50px);}
 .search-input dl dt,
 .search-input dl dd {display: inline-block;}
-.search-input dl dt {width: 15%;}
+.search-input dl dt {width: 15%; min-width: 100px;}
 .search-input dl dd {width: 80%;}
 .search-input dl dd .select {width: 29%;}
 .search-input dl dd .input-text {width: 70%;}
@@ -19,9 +19,13 @@ tr.status-na td {background: var(--color-red-bg);}
 tr.status-released td {background: var(--color-blue-bg);}
 
 .main-list {height: calc(100vh - 250px)}
-.table-wrap {max-height: calc(100% - 100px);}
+.table-wrap {height: calc(100% - 100px);}
 .table-wrap thead th {position: sticky; top: 0; z-index: 20;}
 td[data-col='Title'] a:hover {text-decoration: underline;}
+td[data-col='Select'],
+td[data-col='DP'],
+td[data-col='OnHold'],
+td[data-col='Lyrics'] {text-align: center;}
 
 
 /*Demo Song Info*/
@@ -47,10 +51,7 @@ dl.dl-inline dd {display: inline-block;}
 .excel-list .table-wrap {max-height: calc(100% - 50px);}
 
 /*Popup*/
-#popup {padding: 20px;}
-.popup-header h2 {font-size: 20px; font-weight: bold; margin-bottom: 10px;}
-.popup-list .input-text {width: 100%;}
-#popup table {border-top: 2px solid #252525; min-width: 550px;}
+.pitching-wrap .table-wrap {height: calc(100% - 80px);}
 
 /*Demo Client List*/
 .client-list .table-wrap {height: calc(100% - 100px);}
@@ -58,3 +59,9 @@ dl.dl-inline dd {display: inline-block;}
 /*Demo Client Info*/
 .clientInfo-list .th-col {width: 120px}
 .clientInfo-list table label + span {display: inline-block; padding-left: 10px;}
+.clientInfo-list .input-text {width: 100%;}
+
+
+/*mypage*/
+.mypage-wrap {}
+

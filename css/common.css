@@ -13,7 +13,7 @@ table.table-row th i {font-size: .9em;}
 table.table-row td {font-weight: 500; padding: 8px 10px ; vertical-align: middle;  border-bottom: 1px solid #ebebeb; border-right: 1px solid #ebebeb;}
 
 
-table.table-column {width:100%;/*border: 1px solid #eaecee;*/}
+table.table-column {width:100%; border: 1px solid #e7e7e7}
 table.table-column th {background:#f7f7f7; color:#252525; padding:8px 10px;  font-weight:500;  border-bottom: 1px solid #d5d5d5; vertical-align: middle; }
 table.table-column tr:last-of-type th {border-bottom: 1px solid #d1d1d1; }
 table.table-column td {border-bottom: 1px solid #ddd; text-align: left; padding: 8px 10px; vertical-align: middle; }

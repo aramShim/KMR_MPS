@@ -24,6 +24,7 @@
 	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
 	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
 	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/rw_style.css?<?=time()?>" />
 		
 	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -38,6 +39,7 @@
 	<div id="aside" class="aside-fixed">
 		<div class="aside-header">
 			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+			<button type="button"><i class="icon-sign03"></i></button>
 		</div>
 		<div class="gnb">			
 			<ul class="dep nav-menu">
@@ -67,18 +69,22 @@
 			</ul>
 		</div>
 	</div>
+	<div class="aside-bg"></div>
 	<!--//left Menu-->
 	<!--content-->
 	<div id="content" class="content-wapper">
 		<!--header-->
 		<div id="header">
+			<div class="aside-menu">
+				<button type="button"><i class="icon-sign57"></i></button>
+			</div>
 			<div class="header-mypage">
 				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
 				<div class="mypage-wrap">
 					<p>User Name</p>
 					<span>welcome, User Name!</span>
 					<ul>
-						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href="mypage.html"><i class="icon-business09"></i> Change Password</a></li>
 						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
 					</ul>
 				</div>
@@ -87,7 +93,7 @@
 		<!--//header-->
 
 		<!--excel upload-->
-		<div id="main" class="">
+		<div id="main" class="excelupload-wrap">
 			<div class="main-header">
 				<h2>Excel Upload</h2>
 			</div>

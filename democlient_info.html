@@ -24,6 +24,7 @@
 	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
 	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
 	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/rw_style.css?<?=time()?>" />
 		
 	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -38,6 +39,7 @@
 	<div id="aside" class="aside-fixed">
 		<div class="aside-header">
 			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+			<button type="button"><i class="icon-sign03"></i></button>
 		</div>
 		<div class="gnb">			
 			<ul class="dep nav-menu">
@@ -67,18 +69,22 @@
 			</ul>
 		</div>
 	</div>
+	<div class="aside-bg"></div>
 	<!--//left Menu-->
 	<!--content-->
 	<div id="content" class="content-wapper">
 		<!--header-->
 		<div id="header">
+			<div class="aside-menu">
+				<button type="button"><i class="icon-sign57"></i></button>
+			</div>
 			<div class="header-mypage">
 				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
 				<div class="mypage-wrap">
 					<p>User Name</p>
 					<span>welcome, User Name!</span>
 					<ul>
-						<li><a href=""><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href="mypage.html"><i class="icon-business09"></i> Change Password</a></li>
 						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
 					</ul>
 				</div>
@@ -86,8 +92,8 @@
 		</div>
 		<!--//header-->
 
-		<!--main :: demo song list-->
-		<div id="main" class="">
+		<!--main :: Demo Client Info-->
+		<div id="main" class="client-info-wrap">
 			<div class="main-header">
 				<h2>Demo Client Info</h2>
 				
@@ -101,24 +107,19 @@
 								<col>
 								<col class="th-col">
 								<col>
-								<col class="th-col">
-								<col>
-								<col class="th-col">
-								<col>
 							</colgroup>
 							<tbody>
 								<tr>
 									<th>Client Cd</th>
-									<td><input type="text" class="input-text"></td>
+									<td colspan="3"><input type="text" class="input-text"></td>								
+								</tr>
+								<tr>
 									<th>Client Nm</th>
 									<td><input type="text" class="input-text"></td>
 									<th>Kor Nm</th>
-									<td><input type="text" class="input-text"></td>	
-									<td></td>
-									<td></td>
+									<td><input type="text" class="input-text"></td>								
 								</tr>
-								<tr>
-									
+								<tr>									
 									<th>Admin</th>
 									<td>
 										<select name="" id="" class="select">
@@ -156,6 +157,9 @@
 											<option value="">World excluding Japan, Japan</option>
 										</select>
 									</td>
+									
+								</tr>
+								<tr>
 									<th>Contract Type</th>
 									<td>
 										<select name="" id="" class="select">
@@ -178,6 +182,9 @@
 									<td><input type="text" class="input-date datepicker-period"></td>
 									<th>From-to</th>
 									<td><input type="text" class="input-date datepicker-periods"></td>		
+									
+								</tr>
+								<tr>
 									<th>Auto Extenstion</th>
 									<td>
 										<label class="c_opt c_check">
@@ -200,6 +207,9 @@
 									<td><input type="text" class="input-text"></td>
 									<th>From-to</th>
 									<td><input type="text" class="input-date datepicker-periods"></td>	
+									
+								</tr>
+								<tr>
 									<th>Terminate</th>
 									<td>
 										<label class="c_opt c_check">
@@ -213,13 +223,16 @@
 								</tr>
 								<tr>
 									<th>Remark</th>
-									<td colspan="7"><input type="text" class="input-text"></td>
+									<td colspan="3"><input type="text" class="input-text"></td>
 								</tr>
 								<tr>
 									<th>Writer Type</th>
 									<td><input type="text" class="input-text"></td>
 									<th>Mobile</th>
 									<td><input type="text" class="input-text"></td>
+									
+								</tr>
+								<tr>
 									<th>E-Mail</th>
 									<td><input type="text" class="input-text"></td>
 									<th>Web PW</th>
@@ -230,11 +243,14 @@
 									<td>2023-09-11 15:15:39</td>
 									<th>Cr User Cd</th>
 									<td>ldy</td>
+									
+								</tr>	
+								<tr>
 									<th>Mody Time</th>
 									<td>2023-09-20 11:39:10</td>
 									<th>Mody User Cd</th>
 									<td>rae</td>
-								</tr>								
+								</tr>
 							</tbody>
 						</table>
 					</div>
@@ -246,12 +262,6 @@
 			
 		</div>
 		<!--//main-->
-
-		<!--footer-->
-		<div id="footer">
-			<p>2023@ Design by EasyNext</p>
-		</div>
-		<!--//footer-->
 	</div>
 	<!--//content-->
 </div>

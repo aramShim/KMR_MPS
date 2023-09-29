@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.login-wrap {
+	display: flex; width: 100%; min-height: 100vh; align-items: center;  background-color: #f9fafc; position: relative;
+	--border-color: #E0E3EB;
+}
+.login-wrap .login-left {width: 20%; height: 100vh; background: url(../img/login-bg.png) no-repeat center center; background-size: cover; }
+.login-wrap .login-left p b {font-weight: 900; font-size: 24px;}
+.login-wrap .login-right {position: absolute; top: 50%; left: 60%; max-width: 600px; transform: translate(-50%,-50%); background: #fff; padding: 100px 60px 80px; border-radius: 10px; box-shadow: 2px 2px 4px rgba(0,0,0,.035); width: 50%;}
+.login-wrap .login-right h2 {text-align: center; font-size: 24px; font-weight: 700;padding-bottom: 40px;}
+.login-layout .input-text {font-size: 15px; border: 1px solid #ccc; border-radius: 4px; width: 100%; padding: 10px; margin-bottom: 10px; height: 46px;}
+.login-layout .input-text::placeholder {color: #ccc;}
+.login-layout .layout-info {padding-top: 10px; margin-top: 10px; border-top: 1px solid #ccc; font-size: 14px; color: #aeaeae; word-break: keep-all;}
+.login-layout .layout-info i {padding-right: 10px;}
+.form-btn {margin: 10px 0 40px;}
+.form-btn .btn {background: #221e1f; width: 100%; border-radius: 5px; font-size: 15px; font-weight: 700; text-align: center; color: #fff; padding: 14px 0; justify-content: center;}
+
+/* **************************************** *
+ * ~980px
+ * **************************************** */
+@media (max-width: 980px){
+	.login-wrap .login-left {width: 100%;}
+	.login-wrap .login-right {width: 100%; left: 50%;}
+}
+
+/* **************************************** *
+ * ~680px
+ * **************************************** */
+@media (max-width: 680px){
+	.login-wrap .login-right {max-width: 80%;}
+}
+/* **************************************** *
+ * ~480px
+ * **************************************** */
+@media (max-width: 480px){
+	.login-wrap .login-right {max-width: 90%; padding: 60px 30px;}
+	.login-wrap .login-right h2 {padding-bottom: 20px;}
+}
+/* **************************************** *
+ * ~290px
+ * **************************************** */
+@media (max-width: 291px){
+	.login-wrap .login-right {max-width: 95%; padding: 60px 18px;}
+}

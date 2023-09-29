@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/lib/daterangepicker.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/layout.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/rw_style.css?<?=time()?>" />
+		
+	<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/kmrmps.js"></script>
+	
+</head>
+<body>
+<div id="wrap">
+	<!--left Menu-->
+	<div id="aside" class="aside-fixed">
+		<div class="aside-header">
+			<h1><a href="/"><img src="img/logo3.png" alt="KMS MPS"></a></h1>
+			<button type="button"><i class="icon-sign03"></i></button>
+		</div>
+		<div class="gnb">			
+			<ul class="dep nav-menu">
+				<li class="nav-list">
+					<a href="#">Demo Song <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="index.html" class="on">Demo Song List</a></li>
+						<li><a href="demosong_info.html">Demo Song Info</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Pitching History <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="pitching_update.html">Pitching History Update</a></li>
+					</ul>
+				</li>
+				<li class="nav-list">
+					<a href="#">Demo Client <i class="icon-arrow12"></i></a>
+					<ul class="dep-dep1">
+						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
+						<li><a href="democlient_list.html">Demo Client List</a></li>
+						<li><a href="democlient_info.html">Demo Client Info</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="aside-bg"></div>
+	<!--//left Menu-->
+	<!--content-->
+	<div id="content" class="content-wapper">
+		<!--header-->
+		<div id="header">
+			<div class="aside-menu">
+				<button type="button"><i class="icon-sign57"></i></button>
+			</div>
+			<div class="header-mypage">
+				<button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person18"></i></button>
+				<div class="mypage-wrap">
+					<p>User Name</p>
+					<span>welcome, User Name!</span>
+					<ul>
+						<li><a href="mypage.html"><i class="icon-business09"></i> Change Password</a></li>
+						<li><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--//header-->
+
+		<!--main :: my page-->
+		<div id="main" class="mypage-wrap">
+			<div class="main-header">
+				<h2>My Page</h2>
+			</div>
+			<div class="border-section">
+				<div class="table-wrap">
+					<table class="table-column">
+						<colgroup>
+							<col class="th-col" width="20%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>ID</th>
+								<td>User Id</td>
+							</tr>
+							<tr>
+								<th>New Password</th>
+								<td>
+									<input type="password" class="input-text">
+								</td>
+							</tr>
+							<tr>
+								<th>Confirm New Password</th>
+								<td>
+									<input type="password" class="input-text">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="btn-center-wrap">
+				<button type="button" class="btn btn-pos">Save</button>
+			</div>
+		</div>
+		<!--//main-->
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <title>KMR MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+	<meta name="description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">	
+
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/cncicon.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/font.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/common.css?<?=time()?>" />
+	<link type="text/css" rel="stylesheet" href="css/login.css?<?=time()?>" />
+	
+</head>
+<body>
+<div class="login-wrap">		
+		<div class="login-left"></div>
+		<div class="login-right">
+			<h2 class="en">LOGIN</h2>
+			<div class="login-layout">
+				<form action="login_action" method="POST">
+					<div class="form-item">
+						<input type="text" id="id" name="id" class="input-text" placeholder="Id">
+					</div>
+					<div class="form-item">						
+						<input type="password" id="password" name="password" class="input-text" placeholder="Password">
+					</div>
+					<div class="form-btn">
+						<button type="submit" class="btn btn-dark">Login</button>
+					</div>
+				</form>
+				<p class="layout-info">
+					<span><i class="icon-sign46"></i>비밀번호를 잊으셨다면 관리자에게 연락주시기 바랍니다.</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
