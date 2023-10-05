@@ -85,7 +85,7 @@ table th i[orderby='DESC']{color: var(--color-blue);}
 .filename {position: relative;}
 .filename .c_check {position: absolute; top: 50%; right: 20px; transform: translateY(-50%);}
 .filename .c_opt__label {padding: 0 0 0 24px;}
-.upload-name {background: #fff; min-width: 300px; margin-right: 5px;}
+.upload-name {background: #fff; margin-right: 5px; max-width:500px;}
 .upload-name a {display: inline-block; width: 80%; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;  line-height: 36px;}
 
 /*select 공통*/
