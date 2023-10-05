@@ -56,6 +56,7 @@
 					<ul class="dep-dep1">
 						<!-- 해당 페이지일경우 on 태그 넣어주세요-->
 						<li><a href="pitching_update.html">Pitching History Update</a></li>
+						<li><a href="demosong_excelUpload.html">Excel Upload</a></li>
 					</ul>
 				</li>
 				<li class="nav-list">
@@ -96,8 +97,22 @@
 		<div id="main" class="demosong-info-wrap">
 			<div class="main-header">
 				<h2>Demo Song Info</h2>
-				<div class="button-wrap ly-right">
-					<a href="demosong_excelUpload.html" class="btn green btn-sm"><i class="icon-arrow86"></i> Excel Upload</a>
+				<div class="button-wrap ly-right flex">
+					<div class="filebox flex">
+						<div class="filename">
+							<!--[P] a태그 href에 파일경로 넣어주세요.-->
+							<p class="upload-name input-text"><a href="" download></a></p>
+							<label class="c_opt c_check">
+								<input class="c_opt__btn input_check__btn" type="checkbox">
+								<span class="c_opt__label input_check__label square">del</span>
+							</label>
+						</div>
+						<label for="file" class="input-file">						
+							<input type="file" id="file">
+							<span class="btn btn-sm dark">Attached File</span>
+						</label> 
+						
+					</div>
 				</div>
 			</div>
 			<div class="info-list flex">

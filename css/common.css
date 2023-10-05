@@ -2,7 +2,7 @@
 
 /*table 공통*/
 table tr th.required span{position: relative;}
-table tr th.required span:before {content:''; display: inline-block; width: 4px; height: 4px; background: var(--color-red); border-radius: 50%; position: absolute; top: 50%; left: -10px; transform: translateY(-50%) margin-right: 5px;}
+table tr th.required span:before {content:''; display: inline-block; width: 4px; height: 4px; background: var(--color-red); border-radius: 50%; position: absolute; top: 50%; left: -10px; transform: translateY(-50%); margin-right:5px;}
 .fixed-width {width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;}
 
 
@@ -81,7 +81,12 @@ table th i[orderby='DESC']{color: var(--color-blue);}
 .input-text::-moz-input-placeholder { color: #cacaca; }
 
 /*input - file*/
-.input-file {display: none;}
+.input-file input[type='file'] {position: absolute; width:0; height:0; padding:0; overflow: hidden; border:0;}
+.filename {position: relative;}
+.filename .c_check {position: absolute; top: 50%; right: 20px; transform: translateY(-50%);}
+.filename .c_opt__label {padding: 0 0 0 24px;}
+.upload-name {background: #fff; min-width: 300px; margin-right: 5px;}
+.upload-name a {display: inline-block; width: 80%; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;  line-height: 36px;}
 
 /*select 공통*/
 .select {

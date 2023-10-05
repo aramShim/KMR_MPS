@@ -4,7 +4,15 @@ $(function(){
 	if ($('.nav-list').length > 0) {leftMenu();}
 	if ($('.js-btn-mypage').length > 0) {btnMypage();}
 	if ($('.datepicker-period').length > 0) {dateSetting();}
+	if ($('#file').length > 0) {fileUpload();}
 });
+function fileUpload(){
+	$("#file").on('change',function(){
+		var fileName = $("#file").val();
+		$(".upload-name a").text(fileName);
+	  });
+}
+
 //asideMenu
 function asideMenu(){
 	$('.aside-menu button').click(function(){
